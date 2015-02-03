@@ -3,9 +3,36 @@
 
     <string name="app_name">Sunshine</string>
     <string name="hello_world">Hello world!</string>
+
     <string name="action_settings">Settings</string>
+    <string name="action_maps">Map Location</string>
     <string name="item_forecast_textview">Today</string>
     <string name="item_refresh">Refresh</string>
     <string name="weather_api_id">e9665b0df9e1ca86888dbbce64abba50</string>
+    <string name="title_activity_detail">DetailActivity</string>
+    <!-- Strings related to Location Preference -->
+
+    <string name="pref_location_label">Location</string>
+    <string name="pref_location_key" translable="false">location</string>
+    <string name="pref_location_default" translable="false">94043</string>
+
+    <!-- Strings related to Unit Preference-->
+    <string name="pref_metric_label">Temperature Units</string>
+    <string name="pref_metric_key" translable="false">units</string>
+    <string name="pref_metric_title" translable="false">Select a Unit </string>
+    <string name="pref_metric_summ">Select your favorite metric</string>
+
+    <string name="pref_units_metric">metric</string>
+    <string name="pref_units_imperial">imperial</string>
+
+    <array name="pref_unit_values">
+        <item name="pref_unit_metrics">metric</item>
+        <item name="pref_unit_imperial">imperial</item>
+    </array>
+
+    <array name="pref_unit_options">
+        <item name="pref_metric">Metric</item>
+        <item name="pref_imperial">Imperial</item>
+    </array>
 
 </resources>
