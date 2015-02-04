@@ -117,13 +117,7 @@ public class TestDb extends AndroidTestCase {
             // That's weird, it works on MY machine...
             fail("No values returned :(");
         }
-
-        /* TODO Uncomment for
-        4a - JUnit testing
-        https://www.udacity.com/course/viewer#!/c-ud853/l-1639338560/m-1633698603
         dbHelper.close();
-
-    */
     }
 
     static ContentValues createWeatherValues(long locationRowId) {
