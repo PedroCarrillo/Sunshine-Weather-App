@@ -48,12 +48,32 @@ public  class ForeCastFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setHasOptionsMenu(true);
+        Log.d("cylcle","onCreate");
     }
 
     @Override
     public void onStart(){
         super.onStart();
         updateWeather();
+        Log.d("cylcle","onStart");
+    }
+
+    @Override
+    public void onPause(){
+        super.onPause();
+        Log.d("cylcle","onPause");
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        Log.d("cylcle","onDestroy");
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        Log.d("cylcle","onStop");
     }
 
     @Override
