@@ -32,10 +32,8 @@ public class WeatherContract {
     // relationship between a domain name and its website.  A convenient string to use for the
     // content authority is the package name for the app, which is guaranteed to be unique on the
     // device.
-    /* TODO Uncomment for
-    4b - Adding ContentProvider to our Contract
-    https://www.udacity.com/course/viewer#!/c-ud853/l-1576308909/m-1637521471
-    public static final String CONTENT_AUTHORITY = "com.example.android.sunshine.app";
+
+    public static final String CONTENT_AUTHORITY = "app.sunshine.pedro.example.com.sunshine";
 
     // Use CONTENT_AUTHORITY to create the base of all URI's which apps will use to contact
     // the content provider.
@@ -50,7 +48,6 @@ public class WeatherContract {
 
     public static final String PATH_WEATHER = "weather";
     public static final String PATH_LOCATION = "location";
-    */
 
     /* TODO Uncomment for
     4b - Finishing the FetchWeatherTask
@@ -97,11 +94,7 @@ public class WeatherContract {
     */
 
     public static final class LocationEntry implements BaseColumns {
-        /**
-         * TODO YOUR CODE BELOW HERE FOR QUIZ
-         * QUIZ - 4a - Columns
-         * https://www.udacity.com/course/viewer#!/c-ud853/l-1639338560/e-1633698595/m-1633698597
-         **/
+
         public static final String TABLE_NAME = "location";
         // Column with the city column of location table.
         public static final String COLUMN_LOCATION_SETTING = "location_setting";
@@ -113,10 +106,6 @@ public class WeatherContract {
 
         public static final String COLUMN_COORD_LONG = "coord_lng";
 
-        /* TODO Uncomment for
-        4b - Adding ContentProvider to our Contract
-        https://www.udacity.com/course/viewer#!/c-ud853/l-1576308909/m-1637521471
-
         public static final Uri CONTENT_URI =
                 BASE_CONTENT_URI.buildUpon().appendPath(PATH_LOCATION).build();
 
@@ -124,14 +113,10 @@ public class WeatherContract {
                 "vnd.android.cursor.dir/" + CONTENT_AUTHORITY + "/" + PATH_LOCATION;
         public static final String CONTENT_ITEM_TYPE =
                 "vnd.android.cursor.item/" + CONTENT_AUTHORITY + "/" + PATH_LOCATION;
-        */
 
-        /**
-         * TODO YOUR CODE BELOW HERE FOR QUIZ
-         * QUIZ - 4b - Adding LocationEntry with ID UriBuilder
-         * https://www.udacity.com/course/viewer#!/c-ud853/l-1576308909/e-1604969848/m-1604969849
-         **/
-
+        public static Uri buildLocationUri(long id) {
+            return ContentUris.withAppendedId(CONTENT_URI, id);
+        }
     }
 
     /*
@@ -167,9 +152,6 @@ public class WeatherContract {
         // Degrees are meteorological degrees (e.g, 0 is north, 180 is south).  Stored as floats.
         public static final String COLUMN_DEGREES = "degrees";
 
-        /* TODO Uncomment for
-        4b - Adding ContentProvider to our Contract
-        https://www.udacity.com/course/viewer#!/c-ud853/l-1576308909/m-1637521471
         public static final Uri CONTENT_URI =
                 BASE_CONTENT_URI.buildUpon().appendPath(PATH_WEATHER).build();
 
@@ -206,6 +188,6 @@ public class WeatherContract {
 
         public static String getStartDateFromUri(Uri uri) {
             return uri.getQueryParameter(COLUMN_DATETEXT);
-        }*/
+        }
     }
 }

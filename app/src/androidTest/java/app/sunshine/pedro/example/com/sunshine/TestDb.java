@@ -23,6 +23,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.test.AndroidTestCase;
 import android.util.Log;
 
+import java.util.Date;
 import java.util.Map;
 import java.util.Set;
 
